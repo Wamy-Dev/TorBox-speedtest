@@ -30,12 +30,12 @@ COPY docker/*.php /speedtest/
 COPY docker/entrypoint.sh /
 
 # Prepare default environment variables
-ENV TITLE=LibreSpeed
-ENV MODE=standalone
+ENV TITLE="TorBox Speedtest"
+ENV MODE=frontend
 ENV PASSWORD=password
 ENV TELEMETRY=false
-ENV ENABLE_ID_OBFUSCATION=false
-ENV REDACT_IP_ADDRESSES=false
+ENV ENABLE_ID_OBFUSCATION=true
+ENV REDACT_IP_ADDRESSES=true
 ENV WEBPORT=80
 
 # Final touches
