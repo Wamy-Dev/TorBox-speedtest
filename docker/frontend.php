@@ -6,6 +6,7 @@
 <link rel="apple-touch-icon" href="favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta charset="UTF-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 <script type="text/javascript" src="speedtest.js"></script>
 <script type="text/javascript">
 function I(i){return document.getElementById(i);}
@@ -69,8 +70,8 @@ function initServers(){
 }
 
 var meterBk=/Trident.*rv:(\d+\.\d+)/i.test(navigator.userAgent)?"#EAEAEA":"#80808040";
-var dlColor="#6060AA",
-	ulColor="#616161";
+var dlColor="#04BF8A",
+	ulColor="#F59E0B";
 var progColor=meterBk;
 
 //CODE FOR GAUGES
@@ -186,19 +187,19 @@ function initUI(){
 <style type="text/css">
 	html,body{
 		border:none; padding:0; margin:0;
-		background:#FFFFFF;
-		color:#202020;
+		background:#12141b;
+		color:#FFFFFF;
 	}
 	body{
 		text-align:center;
-		font-family:"Roboto",sans-serif;
+		font-family: "Inter", sans-serif;
 	}
 	h1{
-		color:#404040;
+		color:#04BF8A;
 	}
 	#loading{
-		background-color:#FFFFFF;
-		color:#404040;
+		background-color:#12141b;
+		color:#FFFFFF;
 		text-align:center;
 	}
 	span.loadCircle{
@@ -218,9 +219,9 @@ function initUI(){
 	#startStopBtn{
 		display:inline-block;
 		margin:0 auto;
-		color:#6060AA;
+		color:#FFFFFF;
 		background-color:rgba(0,0,0,0);
-		border:0.15em solid #6060FF;
+		border:0.15em solid #FFFFFF;
 		border-radius:0.3em;
 		transition:all 0.3s;
 		box-sizing:border-box;
@@ -378,10 +379,10 @@ function initUI(){
 		}
 	}
 </style>
-<title><?= getenv('TITLE') ?: 'LibreSpeed Example' ?></title>
+<title><?= getenv('TITLE') ?: 'TorBox Speedtest' ?></title>
 </head>
 <body onload="initServers()">
-<h1><?= getenv('TITLE') ?: 'LibreSpeed Example' ?></h1>
+<h1><?= getenv('TITLE') ?: 'TorBox Speedtest' ?></h1>
 <div id="loading" class="visible">
 	<p id="message"><span class="loadCircle"></span>Selecting a server...</p>
 </div>
@@ -397,12 +398,12 @@ function initUI(){
 		<div class="testGroup">
             <div class="testArea2">
 				<div class="testName">Ping</div>
-				<div id="pingText" class="meterText" style="color:#AA6060"></div>
+				<div id="pingText" class="meterText" style="color:#04BF8A"></div>
 				<div class="unit">ms</div>
 			</div>
 			<div class="testArea2">
 				<div class="testName">Jitter</div>
-				<div id="jitText" class="meterText" style="color:#AA6060"></div>
+				<div id="jitText" class="meterText" style="color:#04BF8A"></div>
 				<div class="unit">ms</div>
 			</div>
 		</div>
@@ -420,7 +421,7 @@ function initUI(){
 				<div class="unit">Mbit/s</div>
 			</div>
 		</div>
-		<div id="ipArea">
+		<div id="ipArea" style="display:none">
 			<span id="ip"></span>
 		</div>
 		<div id="shareArea" style="display:none">
@@ -430,45 +431,6 @@ function initUI(){
 			<img src="" id="resultsImg" />
 		</div>
 	</div>
-	<a href="https://github.com/librespeed/speedtest">Source code</a>
-</div>
-<div id="privacyPolicy" style="display:none">
-    <h2>Privacy Policy</h2>
-    <p>This HTML5 speed test server is configured with telemetry enabled.</p>
-    <h4>What data we collect</h4>
-    <p>
-        At the end of the test, the following data is collected and stored:
-        <ul>
-            <li>Test ID</li>
-            <li>Time of testing</li>
-            <li>Test results (download and upload speed, ping and jitter)</li>
-            <li>IP address</li>
-            <li>ISP information</li>
-            <li>Approximate location (inferred from IP address, not GPS)</li>
-            <li>User agent and browser locale</li>
-            <li>Test log (contains no personal information)</li>
-        </ul>
-    </p>
-    <h4>How we use the data</h4>
-    <p>
-        Data collected through this service is used to:
-        <ul>
-            <li>Allow sharing of test results (sharable image for forums, etc.)</li>
-            <li>To improve the service offered to you (for instance, to detect problems on our side)</li>
-        </ul>
-        No personal information is disclosed to third parties.
-    </p>
-    <h4>Your consent</h4>
-    <p>
-        By starting the test, you consent to the terms of this privacy policy.
-    </p>
-    <h4>Data removal</h4>
-    <p>
-        If you want to have your information deleted, you need to provide either the ID of the test or your IP address. This is the only way to identify your data, without this information we won't be able to comply with your request.<br/><br/>
-        Contact this email address for all deletion requests: <a href="mailto:<?=getenv("EMAIL") ?>"><?=getenv("EMAIL") ?></a>.
-    </p>
-    <br/><br/>
-    <a class="privacy" href="#" onclick="I('privacyPolicy').style.display='none'">Close</a><br/>
 </div>
 </body>
 </html>
