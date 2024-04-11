@@ -1,35 +1,42 @@
-
 [
-	{
-		"name":"Router 001 - Netherlands",
-		"server":"https://router001-speedtest.torbox.app",
-		"dlURL":"garbage.php",
-		"ulURL":"empty.php",
-		"pingURL":"empty.php",
-		"getIpURL":"getIP.php"
-	},
-	{
-		"name":"Router 002 - Luxembourg",
-		"server":"https://router002-speedtest.torbox.app",
-		"dlURL":"garbage.php",
-		"ulURL":"empty.php",
-		"pingURL":"empty.php",
-		"getIpURL":"getIP.php"
-	},
-	{
-		"name":"Router 003 - Luxembourg",
-		"server":"https://router003-speedtest.torbox.app",
-		"dlURL":"garbage.php",
-		"ulURL":"empty.php",
-		"pingURL":"empty.php",
-		"getIpURL":"getIP.php"
-	},
-	{
-		"name":"Router 004 - Luxembourg",
-		"server":"https://router004-speedtest.torbox.app",
-		"dlURL":"garbage.php",
-		"ulURL":"empty.php",
-		"pingURL":"empty.php",
-		"getIpURL":"getIP.php"
-	}
+    {
+        "name": "DOWNLOAD001 - Netherlands",
+        "server": "https://download001-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "DOWNLOAD002 - Netherlands",
+        "server": "https://download002-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "DOWNLOAD003 - Netherlands",
+        "server": "https://download003-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "DOWNLOAD004 - Netherlands",
+        "server": "https://download004-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "DOWNLOAD005 - Germany",
+        "server": "https://download005-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
+    }
 ]
