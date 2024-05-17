@@ -38,5 +38,21 @@
         "ulURL" :"empty.php",
         "pingURL" :"empty.php",
         "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "STREAM001 - Finland",
+        "server": "https://stream001-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "STREAM002 - Finland",
+        "server": "https://stream002-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
     }
 ]
