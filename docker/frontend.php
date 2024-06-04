@@ -376,7 +376,7 @@ function initUI(){
 		}
 	}
 </style>
-<title><?= getenv('TITLE') ?: 'TorBox Speed Test' ?></title>
+<title>TorBox Speed Test</title>
 </head>
 <body onload="initServers()">
 <header class="w-full px-4 header">
