@@ -8,6 +8,7 @@
 <meta charset="UTF-8" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 <script type="text/javascript" src="speedtest.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script type="text/javascript">
 function I(i){return document.getElementById(i);}
 
@@ -29,7 +30,7 @@ s.setParameter("getIp_ispInfo_distance","<?=getenv("DISTANCE") ?>");
 //SERVER AUTO SELECTION
 function initServers(){
     var noServersAvailable=function(){
-        I("message").innerHTML="No servers available";
+        I("message").innerHTML="No test servers available. Please try again later.";
     }
     var runServerSelect=function(){
         s.selectServer(function(server){
@@ -194,11 +195,8 @@ function initUI(){
 		text-align:center;
 		font-family: "Inter", sans-serif;
 	}
-	h1{
-		color:#04BF8A;
-	}
 	#loading{
-		background-color:#12141b;
+		/* background-color:#12141b; */
 		color:#FFFFFF;
 		text-align:center;
 	}
@@ -253,7 +251,6 @@ function initUI(){
 	}
 	#test{
 		margin-top:2em;
-		margin-bottom:12em;
 	}
 	div.testArea{
 		display:inline-block;
@@ -272,7 +269,7 @@ function initUI(){
 	}
 	div.testArea div.testName{
 		position:absolute;
-		top:0.1em; left:0;
+		top:-0.5em; left:0;
 		width:100%;
 		font-size:1.4em;
 		z-index:9;
@@ -379,58 +376,168 @@ function initUI(){
 		}
 	}
 </style>
-<title><?= getenv('TITLE') ?: 'TorBox Speedtest' ?></title>
+<title><?= getenv('TITLE') ?: 'TorBox Speed Test' ?></title>
 </head>
 <body onload="initServers()">
-<h1><?= getenv('TITLE') ?: 'TorBox Speedtest' ?></h1>
-<div id="loading" class="visible">
-	<p id="message"><span class="loadCircle"></span>Selecting a server...</p>
-</div>
-<div id="testWrapper" class="hidden">
-	<div id="startStopBtn" onclick="startStop()"></div>
-	<?php if(getenv("TELEMETRY")=="true"){ ?>
-        <a class="privacy" href="#" onclick="I('privacyPolicy').style.display=''">Privacy</a>
-	<?php } ?>
-	<div id="serverArea">
-		Server: <select id="server" onchange="s.setSelectedServer(SPEEDTEST_SERVERS[this.value])"></select>
+<header class="w-full px-4 header">
+    <div class="flex items-center justify-between w-full py-4 mx-auto max-w-7xl">
+        <div class="flex items-center">
+          <div class="w-20 h-20 -ml-4">
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 1500 1500"
+              xmlSpace="preserve"
+            >
+              <g>
+                <polygon
+                  style="fill:#00444D;"
+                  points="749.99,749.99 749.99,1191.96 367.25,970.97 367.25,529.01"
+                />
+                <polygon
+                  style="fill:#34BA90;"
+                  points="1132.75,529.01 1132.75,970.97 749.99,1191.96 749.99,749.99 872.87,679.05 956.71,630.66"
+                />
+                <polygon
+                  style="fill:#52A153;"
+                  points="1132.75,529.01 749.99,749.99 367.25,529.01 749.99,308.04"
+                />
+                <polygon
+                  style="fill:#FFFFFF"
+                  points="1043.04,739.36 958.66,1057.08 952.4,851.84 839.71,915.39 872.87,679.05 956.71,630.66 931.81,799.21"
+                />
+              </g>
+            </svg>
+          </div>
+          <h1 class="-ml-3 text-3xl font-semibold">Speed Test</h1>
+        </div>
+      <div class="flex items-center justify-center gap-6">
+        <a
+          href="https://torbox.app/pricing"
+          class="hidden text-sm text-gray-300 sm:block"
+          aria-label="Pricing"
+          title="Pricing"
+          name="Pricing"
+        >
+          Pricing
+        </a>
+        <a
+          href="https://support.torbox.app"
+          target="_blank"
+          class="hidden text-sm text-gray-300 sm:block"
+          aria-label="Help Center"
+          title="Help Center"
+          name="Help Center"
+        >
+          Help Center
+        </a>
+        <a
+          href="https://api-docs.torbox.app"
+          target="_blank"
+          class="hidden text-sm text-gray-300 sm:block"
+          aria-label="API"
+          title="API"
+          name="API"
+        >
+          API
+        </a>
+        <a
+          href="https://join-discord.torbox.app"
+          target="_blank"
+          class="hidden text-sm text-gray-300 sm:block"
+          aria-label="Discord"
+          title="Discord"
+          name="Discord"
+        >
+          Discord
+        </a>
+        <a
+          href="https://status.torbox.app"
+          target="_blank"
+          class="hidden text-sm text-gray-300 sm:block"
+          aria-label="Status"
+          title="Status"
+          name="Status"
+        >
+          Status
+        </a>
+        <a
+          href="https://torbox.app/about"
+          class="hidden text-sm text-gray-300 sm:block"
+          aria-label="about"
+          title="about"
+          name="about"
+        >
+          About
+        </ak>
+        <div class="rounded-md bg-gradient-to-r from-[#026873] via-[#04BF8A] to-[#025940] p-[1px]">
+          <a
+            href="https://torbox.app/dashboard"
+            class="flex items-center justify-center bg-[#1c1c1c] rounded-md p-2"
+            aria-label="Login"
+            title="Login"
+            name="Login"
+          >
+            <h1 class="px-3 font-semibold text-white text-md">
+              Dashboard
+            </h1>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="w-full px-4">
+  	<div class="w-full border p-4 rounded-md border-[#212A36] bg-[#1E2129] max-w-7xl mb-4 mx-auto flex flex-wrap justify-center items-center gap-2 min-h-[500px] h-full">
+		<div id="loading" class="visible h-full flex flex-col justify-center items-center">
+			<p id="message"><span class="loadCircle"></span>Selecting a server...</p>
+		</div>
+		<div id="testWrapper" class="hidden mt-10">
+			<div id="startStopBtn" onclick="startStop()"></div>
+			<div id="serverArea">
+				Server: <select id="server" onchange="s.setSelectedServer(SPEEDTEST_SERVERS[this.value])" class="bg-[#12141b] border rounded-md"></select>
+			</div>
+			<div id="test">
+				<div class="testGroup">
+					<div class="testArea2">
+						<div class="testName">Ping</div>
+						<div id="pingText" class="meterText" style="color:#04BF8A"></div>
+						<div class="unit">ms</div>
+					</div>
+					<div class="testArea2">
+						<div class="testName">Jitter</div>
+						<div id="jitText" class="meterText" style="color:#04BF8A"></div>
+						<div class="unit">ms</div>
+					</div>
+				</div>
+				<div class="testGroup">
+					<div class="testArea">
+						<div class="testName mb-2">Download</div>
+						<canvas id="dlMeter" class="meter"></canvas>
+						<div id="dlText" class="meterText"></div>
+						<div class="unit">Mbit/s</div>
+					</div>
+					<div class="testArea">
+						<div class="testName mb-2">Upload</div>
+						<canvas id="ulMeter" class="meter"></canvas>
+						<div id="ulText" class="meterText"></div>
+						<div class="unit">Mbit/s</div>
+					</div>
+				</div>
+				<div id="ipArea" style="display:none">
+					<span id="ip"></span>
+				</div>
+				<div id="shareArea" style="display:none">
+					<h3>Share results</h3>
+					<p>Test ID: <span id="testId"></span></p>
+					<input type="text" value="" id="resultsURL" readonly="readonly" onclick="this.select();this.focus();this.select();document.execCommand('copy');alert('Link copied')"/>
+					<img src="" id="resultsImg" />
+				</div>
+			</div>
+		</div>
 	</div>
-	<div id="test">
-		<div class="testGroup">
-            <div class="testArea2">
-				<div class="testName">Ping</div>
-				<div id="pingText" class="meterText" style="color:#04BF8A"></div>
-				<div class="unit">ms</div>
-			</div>
-			<div class="testArea2">
-				<div class="testName">Jitter</div>
-				<div id="jitText" class="meterText" style="color:#04BF8A"></div>
-				<div class="unit">ms</div>
-			</div>
-		</div>
-		<div class="testGroup">
-			<div class="testArea">
-				<div class="testName">Download</div>
-				<canvas id="dlMeter" class="meter"></canvas>
-				<div id="dlText" class="meterText"></div>
-				<div class="unit">Mbit/s</div>
-			</div>
-			<div class="testArea">
-				<div class="testName">Upload</div>
-				<canvas id="ulMeter" class="meter"></canvas>
-				<div id="ulText" class="meterText"></div>
-				<div class="unit">Mbit/s</div>
-			</div>
-		</div>
-		<div id="ipArea" style="display:none">
-			<span id="ip"></span>
-		</div>
-		<div id="shareArea" style="display:none">
-			<h3>Share results</h3>
-			<p>Test ID: <span id="testId"></span></p>
-			<input type="text" value="" id="resultsURL" readonly="readonly" onclick="this.select();this.focus();this.select();document.execCommand('copy');alert('Link copied')"/>
-			<img src="" id="resultsImg" />
-		</div>
-	</div>
-</div>
 </body>
 </html>
