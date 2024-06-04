@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
 <link rel="apple-touch-icon" href="favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Take a speed test from your device to TorBox's servers to test your bandwidth speeds.">
 <meta charset="UTF-8" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 <script type="text/javascript" src="speedtest.js"></script>
