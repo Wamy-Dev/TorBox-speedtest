@@ -548,9 +548,9 @@ function initUI(){
 			</div>
 			<div class="w-full flex flex-wrap justify-center items-center gap-2">
 				<a href="https://storage.torbox.app/100MB.bin" class="rounded-md p-2 text-white font-semibold">100MB Test File</a>
-				<div class="w-1 border"></div>
+				<div class="w-1 border hidden sm:block"></div>
 				<a href="https://storage.torbox.app/1GB.bin" class="rounded-md p-2 text-white font-semibold">1GB Test File</a>
-				<div class="w-1 border"></div>
+				<div class="w-1 border hidden sm:block"></div>
 				<a href="https://storage.torbox.app/10GB.bin" class="rounded-md p-2 text-white font-semibold">10GB Test File</a>
 			</div>
 		</div>
