@@ -498,7 +498,7 @@ function initUI(){
 		<div id="testWrapper" class="hidden mt-10">
 			<div id="startStopBtn" onclick="startStop()"></div>
 			<div id="serverArea">
-				Server: <select id="server" onchange="s.setSelectedServer(SPEEDTEST_SERVERS[this.value])" class="bg-[#12141b] border rounded-md"></select>
+				Server: <select id="server" onchange="s.setSelectedServer(SPEEDTEST_SERVERS[this.value])" class="bg-[#12141b] border rounded-md border-[#302f2f] hover:border-[#04BF8A] transition duration-300 ease-in-out"></select>
 			</div>
 			<div id="test">
 				<div class="testGroup">
