@@ -540,7 +540,7 @@ function initUI(){
 			</div>
 		</div>
 	</div>
-	<div class="w-full px-4">
+	<div class="w-full">
   		<div class="w-full border p-4 rounded-md border-[#212A36] bg-[#1E2129] max-w-7xl mb-4 mx-auto flex flex-wrap justify-center items-center gap-2 h-full">
 			<div>
 				<h1 class="text-xl font-bold">Test Files</h1>
