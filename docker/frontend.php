@@ -518,13 +518,13 @@ function initUI(){
 						<div class="testName mb-2">Download</div>
 						<canvas id="dlMeter" class="meter"></canvas>
 						<div id="dlText" class="meterText"></div>
-						<div class="unit">Mbit/s</div>
+						<div class="unit">Mbps</div>
 					</div>
 					<div class="testArea">
 						<div class="testName mb-2">Upload</div>
 						<canvas id="ulMeter" class="meter"></canvas>
 						<div id="ulText" class="meterText"></div>
-						<div class="unit">Mbit/s</div>
+						<div class="unit">Mbps</div>
 					</div>
 				</div>
 				<div id="ipArea" style="display:none">
