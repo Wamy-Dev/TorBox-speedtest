@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Inter";
+    font-display: swap;
+    src: url("inter.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "TorBox Dotted";
+    font-display: swap;
+    src: url("torbox-dotted.woff2") format("woff2");
+  }

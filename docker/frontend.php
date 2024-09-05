@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="description" content="Take a speed test from your device to TorBox's servers to test your bandwidth speeds.">
 <meta charset="UTF-8" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+<link rel="stylesheet" href="index.css">
 <script type="text/javascript" src="speedtest.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="text/javascript">
@@ -414,7 +414,7 @@ function initUI(){
               </g>
             </svg>
           </div>
-          <h1 class="-ml-3 text-3xl font-semibold">Speed Test</h1>
+          <h1 class="-ml-3 text-3xl font-medium uppercase font-['TorBox_Dotted']">Speed Test</h1>
         </div>
       <div class="flex items-center justify-center gap-6">
         <a
@@ -483,7 +483,7 @@ function initUI(){
             title="Login"
             name="Login"
           >
-            <h1 class="px-3 font-semibold text-white text-md">
+            <h1 class="px-3 font-medium text-white text-lg uppercase font-['TorBox_Dotted']">
               Dashboard
             </h1>
           </a>
@@ -516,13 +516,13 @@ function initUI(){
 				</div>
 				<div class="testGroup">
 					<div class="testArea">
-						<div class="testName mb-2">Download</div>
+						<div class="testName mb-2 text-3xl font-medium uppercase font-['TorBox_Dotted']">Download</div>
 						<canvas id="dlMeter" class="meter"></canvas>
 						<div id="dlText" class="meterText"></div>
 						<div class="unit">Mbps</div>
 					</div>
 					<div class="testArea">
-						<div class="testName mb-2">Upload</div>
+						<div class="testName mb-2 text-3xl font-medium uppercase font-['TorBox_Dotted']">Upload</div>
 						<canvas id="ulMeter" class="meter"></canvas>
 						<div id="ulText" class="meterText"></div>
 						<div class="unit">Mbps</div>
@@ -543,7 +543,7 @@ function initUI(){
 	<div class="w-full">
   		<div class="w-full border p-4 rounded-md border-[#212A36] bg-[#1E2129] max-w-7xl mb-4 mx-auto flex flex-wrap justify-center items-center gap-2 h-full">
 			<div>
-				<h1 class="text-xl font-bold">Test Files</h1>
+				<h1 class="text-3xl font-medium uppercase font-['TorBox_Dotted']">Test Files</h1>
 				<p class="text-gray-300">Download test files to check your end-to-end download speeds.</p>
 			</div>
 			<div class="w-full flex flex-wrap justify-center items-center gap-2">
