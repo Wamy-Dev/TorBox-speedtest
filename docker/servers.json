@@ -1,6 +1,6 @@
 [
     {
-        "name": "DOWNLOAD001 - Netherlands",
+        "name": "DOWNLOAD001 - Netherlands - 80gbps",
         "server": "https://download001-speedtest.torbox.app",
         "dlURL": "garbage.php",
         "ulURL" :"empty.php",
@@ -8,7 +8,7 @@
         "getIpURL" :"getIP.php"
     },
     {
-        "name": "DOWNLOAD002 - Netherlands",
+        "name": "DOWNLOAD002 - Netherlands - 80gbps",
         "server": "https://download002-speedtest.torbox.app",
         "dlURL": "garbage.php",
         "ulURL" :"empty.php",
@@ -16,40 +16,8 @@
         "getIpURL" :"getIP.php"
     },
     {
-        "name": "DOWNLOAD003 - Netherlands",
+        "name": "DOWNLOAD003 - Netherlands - 80gbps",
         "server": "https://download003-speedtest.torbox.app",
-        "dlURL": "garbage.php",
-        "ulURL" :"empty.php",
-        "pingURL" :"empty.php",
-        "getIpURL" :"getIP.php"
-    },
-    {
-        "name": "DOWNLOAD004 - Netherlands",
-        "server": "https://download004-speedtest.torbox.app",
-        "dlURL": "garbage.php",
-        "ulURL" :"empty.php",
-        "pingURL" :"empty.php",
-        "getIpURL" :"getIP.php"
-    },
-    {
-        "name": "DOWNLOAD005 - Germany",
-        "server": "https://download005-speedtest.torbox.app",
-        "dlURL": "garbage.php",
-        "ulURL" :"empty.php",
-        "pingURL" :"empty.php",
-        "getIpURL" :"getIP.php"
-    },
-    {
-        "name": "STREAM001 - Finland",
-        "server": "https://stream001-speedtest.torbox.app",
-        "dlURL": "garbage.php",
-        "ulURL" :"empty.php",
-        "pingURL" :"empty.php",
-        "getIpURL" :"getIP.php"
-    },
-    {
-        "name": "STREAM002 - Finland",
-        "server": "https://stream002-speedtest.torbox.app",
         "dlURL": "garbage.php",
         "ulURL" :"empty.php",
         "pingURL" :"empty.php",
