@@ -77,32 +77,42 @@ var dlColor="#04BF8A",
 var progColor=meterBk;
 
 //CODE FOR GAUGES
-function drawMeter(c,amount,bk,fg,progress,prog){
-	var ctx=c.getContext("2d");
-	var dp=window.devicePixelRatio||1;
-	var cw=c.clientWidth*dp, ch=c.clientHeight*dp;
-	var sizScale=ch*0.0055;
-	if(c.width==cw&&c.height==ch){
-		ctx.clearRect(0,0,cw,ch);
-	}else{
-		c.width=cw;
-		c.height=ch;
-	}
-	ctx.beginPath();
-	ctx.strokeStyle=bk;
-	ctx.lineWidth=12*sizScale;
-	ctx.arc(c.width/2,c.height-58*sizScale,c.height/1.8-ctx.lineWidth,-Math.PI*1.1,Math.PI*0.1);
-	ctx.stroke();
-	ctx.beginPath();
-	ctx.strokeStyle=fg;
-	ctx.lineWidth=12*sizScale;
-	ctx.arc(c.width/2,c.height-58*sizScale,c.height/1.8-ctx.lineWidth,-Math.PI*1.1,amount*Math.PI*1.2-Math.PI*1.1);
-	ctx.stroke();
-	if(typeof progress !== "undefined"){
-		ctx.fillStyle=prog;
-		ctx.fillRect(c.width*0.3,c.height-16*sizScale,c.width*0.4*progress,4*sizScale);
-	}
+function drawMeter(c, amount, bk, fg, progress, prog) {
+    var ctx = c.getContext("2d");
+    var dp = window.devicePixelRatio || 1;
+    var cw = c.clientWidth * dp, ch = c.clientHeight * dp;
+    var sizScale = ch * 0.0055;
+    if (c.width == cw && c.height == ch) {
+        ctx.clearRect(0, 0, cw, ch);
+    } else {
+        c.width = cw;
+        c.height = ch;
+    }
+    
+    // Set lineCap to 'round' for rounded edges
+    ctx.lineCap = "round"; 
+    
+    // Draw the background arc
+    ctx.beginPath();
+    ctx.strokeStyle = bk;
+    ctx.lineWidth = 12 * sizScale;
+    ctx.arc(c.width / 2, c.height - 58 * sizScale, c.height / 1.8 - ctx.lineWidth, -Math.PI * 1.1, Math.PI * 0.1);
+    ctx.stroke();
+    
+    // Draw the foreground arc (progress)
+    ctx.beginPath();
+    ctx.strokeStyle = fg;
+    ctx.lineWidth = 12 * sizScale;
+    ctx.arc(c.width / 2, c.height - 58 * sizScale, c.height / 1.8 - ctx.lineWidth, -Math.PI * 1.1, amount * Math.PI * 1.2 - Math.PI * 1.1);
+    ctx.stroke();
+    
+    // Draw the progress bar if progress is defined
+    if (typeof progress !== "undefined") {
+        ctx.fillStyle = prog;
+        ctx.fillRect(c.width * 0.3, c.height - 16 * sizScale, c.width * 0.4 * progress, 4 * sizScale);
+    }
 }
+
 function mbpsToAmount(s){
 	return 1-(1/(Math.pow(1.3,Math.sqrt(s))));
 }
@@ -262,23 +272,21 @@ function initUI(){
 	}
 	div.testArea2{
 		display:inline-block;
-		width:14em;
-		height:7em;
+		width:16em;
+		height:8em;
 		position:relative;
 		box-sizing:border-box;
 		text-align:center;
 	}
 	div.testArea div.testName{
 		position:absolute;
-		top:-0.5em; left:0;
+		top:-0.8em; left:0;
 		width:100%;
-		font-size:1.4em;
 		z-index:9;
 	}
 	div.testArea2 div.testName{
         display:block;
         text-align:center;
-        font-size:1.4em;
 	}
 	div.testArea div.meterText{
 		position:absolute;
@@ -504,25 +512,25 @@ function initUI(){
 			<div id="test">
 				<div class="testGroup">
 					<div class="testArea2">
-						<div class="testName mb-2 text-4xl font-medium uppercase font-['TorBox_Dotted']">Ping</div>
+						<div class="testName mb-1 text-4xl font-medium uppercase font-['TorBox_Dotted']">Ping</div>
 						<div id="pingText" class="meterText" style="color:#04BF8A"></div>
 						<div class="unit">ms</div>
 					</div>
 					<div class="testArea2">
-						<div class="testName mb-2 text-4xl font-medium uppercase font-['TorBox_Dotted']">Jitter</div>
+						<div class="testName mb-1 text-4xl font-medium uppercase font-['TorBox_Dotted']">Jitter</div>
 						<div id="jitText" class="meterText" style="color:#04BF8A"></div>
 						<div class="unit">ms</div>
 					</div>
 				</div>
-				<div class="testGroup">
+				<div class="testGroup mt-4">
 					<div class="testArea">
-						<div class="testName mb-2 text-4xl font-medium uppercase font-['TorBox_Dotted']">Download</div>
+						<div class="testName mb-4 text-4xl font-medium uppercase font-['TorBox_Dotted'] mt-4">Download</div>
 						<canvas id="dlMeter" class="meter"></canvas>
 						<div id="dlText" class="meterText"></div>
 						<div class="unit">Mbps</div>
 					</div>
 					<div class="testArea">
-						<div class="testName mb-2 text-4xl font-medium uppercase font-['TorBox_Dotted']">Upload</div>
+						<div class="testName mb-4 text-4xl font-medium uppercase font-['TorBox_Dotted'] mt-4">Upload</div>
 						<canvas id="ulMeter" class="meter"></canvas>
 						<div id="ulText" class="meterText"></div>
 						<div class="unit">Mbps</div>
