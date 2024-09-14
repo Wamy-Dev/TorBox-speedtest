@@ -23,6 +23,7 @@ COPY results/*.ttf /speedtest/results/
 
 COPY *.js /speedtest/
 COPY favicon.ico /speedtest/
+COPY index.css /speedtest/
 
 COPY docker/servers.json /servers.json
 
