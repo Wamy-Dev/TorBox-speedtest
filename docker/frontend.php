@@ -504,25 +504,25 @@ function initUI(){
 			<div id="test">
 				<div class="testGroup">
 					<div class="testArea2">
-						<div class="testName">Ping</div>
+						<div class="testName mb-2 text-4xl font-medium uppercase font-['TorBox_Dotted']">Ping</div>
 						<div id="pingText" class="meterText" style="color:#04BF8A"></div>
 						<div class="unit">ms</div>
 					</div>
 					<div class="testArea2">
-						<div class="testName">Jitter</div>
+						<div class="testName mb-2 text-4xl font-medium uppercase font-['TorBox_Dotted']">Jitter</div>
 						<div id="jitText" class="meterText" style="color:#04BF8A"></div>
 						<div class="unit">ms</div>
 					</div>
 				</div>
 				<div class="testGroup">
 					<div class="testArea">
-						<div class="testName mb-2 text-3xl font-medium uppercase font-['TorBox_Dotted']">Download</div>
+						<div class="testName mb-2 text-4xl font-medium uppercase font-['TorBox_Dotted']">Download</div>
 						<canvas id="dlMeter" class="meter"></canvas>
 						<div id="dlText" class="meterText"></div>
 						<div class="unit">Mbps</div>
 					</div>
 					<div class="testArea">
-						<div class="testName mb-2 text-3xl font-medium uppercase font-['TorBox_Dotted']">Upload</div>
+						<div class="testName mb-2 text-4xl font-medium uppercase font-['TorBox_Dotted']">Upload</div>
 						<canvas id="ulMeter" class="meter"></canvas>
 						<div id="ulText" class="meterText"></div>
 						<div class="unit">Mbps</div>
