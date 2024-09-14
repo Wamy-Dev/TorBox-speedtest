@@ -11,6 +11,9 @@ cp /speedtest/*.js /var/www/html/
 
 # Copy favicon
 cp /speedtest/favicon.ico /var/www/html/
+cp /speedtest/index.css /var/www/html/
+cp /speedtest/inter.woff2 /var/www/html/
+cp /speedtest/torbox-dotted.woff2 /var/www/html/
 
 # Set up backend side for standlone modes
 if [[ "$MODE" == "standalone" || "$MODE" == "dual" ]]; then

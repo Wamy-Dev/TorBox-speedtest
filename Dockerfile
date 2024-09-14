@@ -23,7 +23,9 @@ COPY results/*.ttf /speedtest/results/
 
 COPY *.js /speedtest/
 COPY favicon.ico /speedtest/
-COPY index.css /speedtest/
+COPY docker/index.css /speedtest/
+COPY docker/inter.woff2 /speedtest/
+COPY docker/torbox-dotted.woff2 /speedtest/
 
 COPY docker/servers.json /servers.json
 
