@@ -554,12 +554,35 @@ function initUI(){
 				<h1 class="text-3xl font-medium uppercase font-['TorBox_Dotted']">Test Files</h1>
 				<p class="text-gray-300">Download test files to check your end-to-end download speeds.</p>
 			</div>
+			<
 			<div class="w-full flex flex-wrap justify-center items-center gap-2">
-				<a href="https://storage.torbox.app/100MB.bin" class="rounded-md p-2 text-white font-semibold">100MB Test File</a>
-				<div class="w-1 border hidden sm:block"></div>
-				<a href="https://storage.torbox.app/1GB.bin" class="rounded-md p-2 text-white font-semibold">1GB Test File</a>
-				<div class="w-1 border hidden sm:block"></div>
-				<a href="https://storage.torbox.app/10GB.bin" class="rounded-md p-2 text-white font-semibold">10GB Test File</a>
+				<div>
+					<p>Main Server Test Files</p>
+					<p class="text-gray-300">Hosted in the Netherlands</p>
+					<a href="https://storage.torbox.app/100MB.bin" class="rounded-md p-2 text-white font-semibold">100MB Test File</a>
+					<div class="w-1 border hidden sm:block"></div>
+					<a href="https://storage.torbox.app/1GB.bin" class="rounded-md p-2 text-white font-semibold">1GB Test File</a>
+					<div class="w-1 border hidden sm:block"></div>
+					<a href="https://storage.torbox.app/10GB.bin" class="rounded-md p-2 text-white font-semibold">10GB Test File</a>
+				</div>
+				<div>
+					<p>WNAM CDN Test Files</p>
+					<p class="text-gray-300">Hosted on the USA CDN</p>
+					<a href="https://hyperdrive.test.wnam.torbox.app/100MB.bin" class="rounded-md p-2 text-white font-semibold">100MB Test File</a>
+					<div class="w-1 border hidden sm:block"></div>
+					<a href="https://hyperdrive.test.wnam.torbox.app/1GB.bin" class="rounded-md p-2 text-white font-semibold">1GB Test File</a>
+					<div class="w-1 border hidden sm:block"></div>
+					<a href="https://hyperdrive.test.wnam.torbox.app/10GB.bin" class="rounded-md p-2 text-white font-semibold">10GB Test File</a>
+				</div>
+				<div>
+					<p>APAC CDN Test Files</p>
+					<p class="text-gray-300">Hosted on the Singapore CDN</p>
+					<a href="https://hyperdrive.test.apac.torbox.app/100MB.bin" class="rounded-md p-2 text-white font-semibold">100MB Test File</a>
+					<div class="w-1 border hidden sm:block"></div>
+					<a href="https://hyperdrive.test.apac.torbox.app/1GB.bin" class="rounded-md p-2 text-white font-semibold">1GB Test File</a>
+					<div class="w-1 border hidden sm:block"></div>
+					<a href="https://hyperdrive.test.apac.torbox.app/10GB.bin" class="rounded-md p-2 text-white font-semibold">10GB Test File</a>
+				</div>
 			</div>
 		</div>
 	</div>
