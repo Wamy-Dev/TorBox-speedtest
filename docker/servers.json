@@ -22,5 +22,37 @@
         "ulURL" :"empty.php",
         "pingURL" :"empty.php",
         "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "DOWNLOAD005 - Netherlands - 80gbps",
+        "server": "https://download005-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "DOWNLOAD007 - Netherlands - 80gbps",
+        "server": "https://download007-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "DOWNLOAD008 - Netherlands - 80gbps",
+        "server": "https://download008-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
+    },
+    {
+        "name": "DOWNLOAD010 - Netherlands - 80gbps",
+        "server": "https://download010-speedtest.torbox.app",
+        "dlURL": "garbage.php",
+        "ulURL" :"empty.php",
+        "pingURL" :"empty.php",
+        "getIpURL" :"getIP.php"
     }
 ]
